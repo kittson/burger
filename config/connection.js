@@ -12,12 +12,13 @@ var source = {
 		host: 'l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 		user: 'jgotkr7oz6c79646',
 		password: "taflo1z5erysozb0",
-		database: "ain2m4556hkzmiym"
+		database: "ngmt7k8mqagcexzi"
 
      }
   }
 
 var connection = mysql.createConnection( source.jawsDB);
+//var connection = mysql.createConnection( process.env.JAWSDB_URL);
 
 connection.connect(function(err) {
     if (err) {

@@ -25,7 +25,7 @@ app.use('/', routes);
 
 //var port = 3006;
 //app.listen(port);
-var PORT = process.env.PORT || 3006;
+var PORT = process.env.PORT || 3006;//must use this for heroku deployment!
 app.listen(PORT, function() {
   console.log('Listening on port ' + PORT)
 });
