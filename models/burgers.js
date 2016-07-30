@@ -1,7 +1,3 @@
-/*
-Here is where you setup a model for how to interface with the database.
-*/
-
 var orm = require('../config/orm.js');
 
 var burger = {
@@ -10,7 +6,6 @@ var burger = {
 			cb(res);
 		});
 	},
-
 	insertBurg: function(newBurgName, cb) {
 		orm.insertOne('burgers', newBurgName, function(res){
 			cb(res);
