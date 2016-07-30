@@ -8,11 +8,7 @@ var source = {
 		database: "burgers_db"
 	},
 	jawsDB: {
-		port: 3306,
-		/* host: 'l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-		user: 'jgotkr7oz6c79646',
-		password: "taflo1z5erysozb0",
-		database: "ngmt7k8mqagcexzi" */
+		port: 3306,		
 		host: 'tviw6wn55xwxejwj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 		user: 'yr662oy1nhckm3w8',
 		password: "cmpdiqopwvtbo9hi",
@@ -21,9 +17,10 @@ var source = {
      }
   }
 
-var connection = mysql.createConnection( source.jawsDB);
-//var connection = mysql.createConnection( process.env.JAWSDB_URL);
-
+//var connection = mysql.createConnection( source.jawsDB);
+if(process.env.JAWSDB_URL){
+	var connection = mysql.createConnection( process.env.JAWSDB_URL);
+}
 connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
